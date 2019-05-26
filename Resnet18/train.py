@@ -38,6 +38,8 @@ transform_test = transforms.Compose([
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
 
+# 在这里输入数据集和测试集！！！如果是自己写的CIFAR10应该就不用写trainset这一行吧，直接dataloader试试
+
 trainset = torchvision.datasets.CIFAR10(root='D:\PyCharmProject\Resnet18\data', train=True, download=False, transform=transform_train)
 # 训练数据集
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
